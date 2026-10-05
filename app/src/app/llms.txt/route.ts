@@ -20,23 +20,23 @@ export function GET() {
   const a = launchpad("arc");
   const body = `# ${BRAND_DOMAIN}
 
-> openlaunch (${BRAND_DOMAIN}) is an open-source (MIT: https://github.com/Gitlawb/openlaunch), zero-fee token launchpad on Base (8453), Robinhood Chain (4663) and Arc (5042). One transaction deploys a token and locks 100% of its supply as
+> oklaunch (${BRAND_DOMAIN}) is an open-source (MIT: https://github.com/Gitlawb/openlaunch), zero-fee token launchpad on Base (8453), Robinhood Chain (4663) and Arc (5042). One transaction deploys a token and locks 100% of its supply as
 > Uniswap v4 liquidity, forever. No platform fee: the factory and locker have no fee address at all. About page: ${SITE_URL}/about
 
 ## Source verification
 ${verificationLine("Base (8453)", b, [
-  ["Basescan", (a) => `https://basescan.org/address/${a}#code`],
-  ["Blockscout", (a) => `https://base.blockscout.com/address/${a}?tab=contract`],
-  ["Sourcify", (a) => `https://repo.sourcify.dev/8453/${a}`],
-])}
+    ["Basescan", (a) => `https://basescan.org/address/${a}#code`],
+    ["Blockscout", (a) => `https://base.blockscout.com/address/${a}?tab=contract`],
+    ["Sourcify", (a) => `https://repo.sourcify.dev/8453/${a}`],
+  ])}
 ${verificationLine("Robinhood Chain (4663)", r, [
-  ["Blockscout", (a) => `https://robinhoodchain.blockscout.com/address/${a}?tab=contract`],
-  ["Sourcify", (a) => `https://repo.sourcify.dev/4663/${a}`],
-])}
+    ["Blockscout", (a) => `https://robinhoodchain.blockscout.com/address/${a}?tab=contract`],
+    ["Sourcify", (a) => `https://repo.sourcify.dev/4663/${a}`],
+  ])}
 ${verificationLine("Arc (5042)", a, [
-  ["Arc Explorer", (x) => `https://explorer.arc.io/address/${x}?tab=contract`],
-  ["Sourcify", (x) => `https://repo.sourcify.dev/5042/${x}`],
-])}
+    ["Arc Explorer", (x) => `https://explorer.arc.io/address/${x}?tab=contract`],
+    ["Sourcify", (x) => `https://repo.sourcify.dev/5042/${x}`],
+  ])}
 
 ## What a launch does
 1. deploys a fixed-supply ERC-20 (1,000,000,000; no mint/pause/blacklist/tax/owner)

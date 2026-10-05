@@ -7,7 +7,7 @@ import SectionIntro from "@/components/sections/SectionIntro";
 import styles from "@/components/sections/SectionShell.module.css";
 import { listFeed } from "@/lib/launchpad/postsServer";
 
-export const metadata: Metadata = pageMetadata({ path: "/feed", title: "Posts", description: "What people are saying about tokens launched on openlaunch.lol." });
+export const metadata: Metadata = pageMetadata({ path: "/feed", title: "Posts", description: "What people are saying about tokens launched on oklaunch.fun." });
 export const dynamic = "force-dynamic";
 
 export default async function FeedPage() {

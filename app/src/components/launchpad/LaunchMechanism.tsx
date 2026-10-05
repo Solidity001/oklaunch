@@ -5,7 +5,7 @@ import { useLive } from "./LiveProvider";
 import { GitlawbMark } from "./GitlawbBadge";
 import { fmtQuote, fmtUnitsExact, fmtUsd } from "@/lib/launchpad/math";
 import { GITLAWB_DECIMALS, GITLAWB_SYMBOL } from "@/lib/launchpad/gitlawb";
-import { BRAND_GITHUB } from "@/lib/brand";
+import { BRAND_DOMAIN } from "@/lib/brand";
 import { CHAIN_KEYS, CHAIN_SHORT, chainList } from "@/lib/chainPublic";
 
 /** Real network totals sit outside the illustrative launch, never inside it. */
@@ -19,8 +19,8 @@ export default function LaunchMechanism() {
   const gitlawbBurnedExact = `${fmtUnitsExact(t.gitlawb_burned, GITLAWB_DECIMALS)} ${GITLAWB_SYMBOL}`; // every digit of the raw amount, no float
   return <div className="border-t border-line pt-4">
     <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-      <span className="text-[11px] text-muted">Open by design. Free by construction.</span>
-      <a href={`${BRAND_GITHUB}/tree/main/contracts/src`} target="_blank" rel="noreferrer" className="flex min-h-8 shrink-0 items-center gap-1 text-xs text-ink hover:underline underline-offset-4"><span className="font-mono tnum">$0</span> platform fee <ArrowUpRight size={12} aria-hidden /></a>
+      <span className="text-[11px] text-muted">Free by construction.</span>
+      <a target="_blank" rel="noreferrer" className="flex min-h-8 shrink-0 items-center gap-1 text-xs text-ink hover:underline underline-offset-4"><span className="font-mono tnum">$0</span> platform fee </a>
     </div>
     <dl className="mt-4 grid grid-cols-3 gap-3">
       <Metric label="Tokens launched" value={count(t.launches)} />

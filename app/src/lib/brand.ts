@@ -1,9 +1,9 @@
 /** Single source of truth for the brand. Rename here, nowhere else. */
-export const BRAND = "openlaunch";
+export const BRAND = "oklaunch";
 export const BRAND_TLD = ".lol";
 export const BRAND_DOMAIN = `${BRAND}${BRAND_TLD}`; // openlaunch.lol
 /** @openlaunchlol and the openlaunchlol GitHub org were squatted after the rename — never link them. */
-export const BRAND_X = "openlaunch_lol"; // the official account (never link the look-alike handles)
+export const BRAND_X = "oklaunch_lol"; // the official account (never link the look-alike handles)
 export const BRAND_GITHUB = "https://github.com/Gitlawb/openlaunch"; // MIT, contracts + site
 export const TAGLINE = "launch a token. Free. Open source. On Base, Robinhood Chain or Arc.";
 /**

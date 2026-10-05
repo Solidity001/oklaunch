@@ -10,14 +10,15 @@ import styles from "./Footer.module.css";
 const EXPLORE = [
   { href: "/", label: "Launchpad" },
   { href: "/rules", label: "How it works" },
-  { href: "/about", label: "About openlaunch" },
+  { href: "/about", label: "About oklaunch" },
   { href: "/feed", label: "Community posts" },
   { href: "/me", label: "Your dashboard" },
 ];
 const BUILD = [
   { href: "/agents", label: "Developers & agents" },
-  { href: BRAND_GITHUB, label: "Source code", external: true },
-  { href: "/llms.txt", label: "LLM reference" },
+  //{ href: BRAND_GITHUB, label: "Source code", external: true },
+  //{ href: "/llms.txt", label: "LLM reference" },
+
   { href: `https://x.com/${BRAND_X}`, label: "Updates on X", external: true },
 ];
 
@@ -72,9 +73,9 @@ export default function Footer() {
         </Link>
 
         <div className={styles.bottom}>
-          <p>Open source. Open participation.</p>
+          <p>Oklaunch. Next generation launchpad on base, robinhood and arc.</p>
           <div className={styles.utilities}>
-            <a href={`${BRAND_GITHUB}/blob/main/LICENSE`} target="_blank" rel="noreferrer" className={styles.license}>MIT licensed <ArrowUpRight size={12} aria-hidden="true" /></a>
+
             <a href="#site-top" className={styles.backTop}>Back to top <ArrowUp size={14} aria-hidden="true" /></a>
           </div>
         </div>

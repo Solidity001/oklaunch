@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { btn } from "@/components/ui";
 import LaunchMechanism from "./LaunchMechanism";
 import LaunchMachine from "./LaunchMachine";
-import { BRAND_GITHUB } from "@/lib/brand";
+import { BRAND_X } from "@/lib/brand";
 
 /**
  * First viewport of the home page. Left: the promise and the one filled CTA.
@@ -22,7 +22,7 @@ export default function LaunchHero({ configured }: { ethUsd?: number | null; con
           </h1>
           <p className="mt-6 text-base sm:text-lg text-body max-w-[32rem] leading-relaxed text-pretty">
             {/* the brand as a plain word, once, above the fold: the title and footer alone read as a domain */}
-            <Link href="/about" className="font-semibold text-ink hover:text-brand underline decoration-line-strong underline-offset-4">openlaunch</Link> is the free, open-source launchpad. One transaction: your token, a Uniswap v4 pool, and a liquidity position locked forever. 100% of the supply goes into the pool at launch. We take nothing. You only pay gas.
+            <Link href="/about" className="font-semibold text-ink hover:text-brand underline decoration-line-strong underline-offset-4">oklaunch</Link> is the free, open-source launchpad. One transaction: your token, a Uniswap v4 pool, and a liquidity position locked forever. 100% of the supply goes into the pool at launch. We take nothing. You only pay gas.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
             {/* the header watches this id: while it is on screen the header CTA stays quiet (one filled blue per screen) */}
@@ -36,12 +36,7 @@ export default function LaunchHero({ configured }: { ethUsd?: number | null; con
           </div>
           {/* the proofs that used to be chips: quiet, linkable, one line */}
           <p className="mt-6 font-mono text-xs tnum text-muted">
-            MIT
-            <span aria-hidden> · </span>
-            <a href={BRAND_GITHUB} target="_blank" rel="noreferrer" className="hover:text-ink underline underline-offset-2 decoration-line-strong">
-              source ↗
-            </a>
-            <span aria-hidden> · </span>
+
             <Link href="/rules#contracts" className="hover:text-ink underline underline-offset-2 decoration-line-strong">
               verified contracts
             </Link>

@@ -62,7 +62,7 @@ export default function RulesPage() {
               {CONTENTS.map(([id, title], i) => <li key={id}><a href={`#${id}`}><span>{String(i + 1).padStart(2, "0")}</span>{title}</a></li>)}
             </ol>
           </nav>
-          <a href={BRAND_GITHUB} target="_blank" rel="noreferrer" className={styles.sourceLink}><FileCode2 size={16} aria-hidden="true" /> Read the source <ArrowUpRight size={13} aria-hidden="true" /></a>
+
         </aside>
 
         <div className={styles.article}>
@@ -109,7 +109,7 @@ export default function RulesPage() {
 
           <section className={shell.anchorSection} id="know" aria-labelledby="know-heading">
             <div className={styles.sectionHeading}><div><p className={styles.eyebrow}>04 / Before you begin</p><h2 id="know-heading">Locked liquidity.<br />Not a guarantee of value.</h2></div></div>
-            <p className={styles.riskIntro}>Tokens launched here are created by their launchers, not by openlaunch. Do your own research; a locked pool does not make a token valuable. Nothing is refundable.</p>
+            <p className={styles.riskIntro}>Tokens launched here are created by their launchers, not by oklaunch. Do your own research; a locked pool does not make a token valuable. Nothing is refundable.</p>
             <div className={styles.questions}>
               <details open><summary>How does the price move?<ChevronDown size={17} aria-hidden="true" /></summary><div><p>Price follows a single-sided Uniswap v4 curve: the first buyers get the most tokens per unit of the quote asset, and every buy moves the price up. Sells move it down.</p><p>There is no anti-snipe mechanism. Bots can buy in the first block like anyone else.</p><p>The launch form suggests a small first buy (about $25) so your token opens with a holder and a price; clear it and the launch stays free.</p></div></details>
               <details open><summary>Why is my token under &ldquo;quiet launches&rdquo;?<ChevronDown size={17} aria-hidden="true" /></summary><div><p>The home page ranks by facts, not by launch order. A token is <strong>live</strong> once a wallet other than its launcher has traded it in the last 24 hours; trades in the launch block and the next three blocks (snipe bots) don&apos;t count, and neither do the launcher&apos;s own. Live tokens rank by outside wallets in the last hour, then today, then by their last outside trade. A wallet&apos;s newest launch gets its first hour on the board regardless; after that it sits under quiet launches, one row per wallet, until someone trades it.</p><p>Nothing is hidden: every launch stays in the New tab, in search and in the API. The only way up is a trade from an outside wallet.</p></div></details>

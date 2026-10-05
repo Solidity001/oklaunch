@@ -65,7 +65,7 @@ export default function BridgeReview() {
     quoteLoading: scene === "quoting" || (scene === "idle" || scene === "approval_confirmed") && inputAmount > 0n, canQuote: inputAmount > 0n,
     quoteExpired: scene === "expired", requestQuote: async () => setScene("quote"), confirm: async () => setScene("pending"), reset: () => setScene("quote"),
     tracked: tracking ? { address: wallet, requestId, amount: quote.amount, originChainId: origin, destinationChainId: destination, originAsset, destinationAsset, destinationHashes: [], status: scene as "pending" | "success" | "uncertain" | "refund", createdAt: clock } : null,
-    statusError: null, retryStatus: () => {}, storageError: null, busy: false, canReset: scene === "success" || scene === "refund",
+    statusError: null, retryStatus: () => { }, storageError: null, busy: false, canReset: scene === "success" || scene === "refund",
     approval, approvalRequired: erc20Input && !approved, allowanceLoading: false, approvalBusy: false, approvalError: null,
     approvalHealth: ["approval_queued", "approval_missing", "approval_fee"].includes(scene) ? describePendingApproval({ createdAt: clock - 70_000, now: clock, transaction: scene === "approval_missing" ? null : { nonce: 2, maxFeePerGas: 30_000_000_000n }, latestNonce: scene === "approval_queued" ? 0 : 2, baseFeePerGas: 166_000_000_000n }) : null,
     approve: async () => setScene("approval_pending"), retryApproval: () => { setApproved(true); setScene("approval_confirmed"); },
@@ -84,7 +84,7 @@ export default function BridgeReview() {
           <div className={styles.heading}><Dialog.Title className={styles.title}>Bridge</Dialog.Title><Dialog.Close className={styles.close} aria-label="Close preview"><X size={19} /></Dialog.Close></div>
           <Dialog.Description className={styles.description}>Preview only · {scene} · no funds move</Dialog.Description>
           {tracking ? <Transfer bridge={bridge} /> : <BridgeForm bridge={bridge} connect={() => setScene("quote")} />}
-          <div className={styles.footer}><span>Powered by Relay</span><span>0 Openlaunch fee</span></div>
+          <div className={styles.footer}><span>Powered by Relay</span><span>0 OKlaunch fee</span></div>
         </Dialog.Popup></Dialog.Portal>
       </Dialog.Root>
     </main>

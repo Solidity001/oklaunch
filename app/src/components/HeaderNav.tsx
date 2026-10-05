@@ -86,7 +86,7 @@ function Desktop({ visible = false, pulse, isActive, quietCta }: { visible?: boo
           : "max-w-none border-x-0 border-t-0 px-[max(16px,calc((100vw-1120px)/2))] bg-paper dark:bg-paper",
       )}
     >
-      <Link href="/" className="relative z-20 flex items-center gap-2" aria-label="openlaunch.lol home">
+      <Link href="/" className="relative z-20 flex items-center gap-2" aria-label="oklaunch.lol home">
         <Mark size={24} />
         {/* the wordmark and pulse are the first things to give way when the strip contracts */}
         {!visible ? <Wordmark /> : null}
@@ -224,7 +224,7 @@ function Mobile({ visible = false, pulse, isActive }: { visible?: boolean; pulse
     >
       <MobileNavHeader>
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2 py-1" aria-label="openlaunch.lol home" onClick={() => setOpen(false)}>
+          <Link href="/" className="flex items-center gap-2 py-1" aria-label="oklaunch.lol home" onClick={() => setOpen(false)}>
             <Mark size={24} />
             <Wordmark />
           </Link>

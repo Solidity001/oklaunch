@@ -1,4 +1,4 @@
-# openlaunch.lol (Fly app still named `basebid`; Postgres `basebid-db`) — free, open-source token launchpad on Base + Robinhood Chain. Deploy from this directory:
+# okaylaunch.lol (Fly app still named `basebid`; Postgres `basebid-db`) — free, open-source token launchpad on Base + Robinhood Chain. Deploy from this directory:
 #   fly deploy -c fly.toml --ha=false --remote-only \
 #     --build-arg NEXT_PUBLIC_LAUNCH_FACTORY=0x... --build-arg NEXT_PUBLIC_LAUNCH_LOCKER=0x... \
 #     --build-arg NEXT_PUBLIC_LAUNCH_FACTORY_ROBINHOOD=0x... --build-arg NEXT_PUBLIC_LAUNCH_LOCKER_ROBINHOOD=0x... \

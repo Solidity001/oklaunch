@@ -22,7 +22,7 @@ export const metadata: Metadata = pageMetadata({
 
 const DIFFERENCES = [
   ["No platform fee", "The factory and the locker have no fee address, fee variable or treasury. There is nothing to switch on later."],
-  ["Liquidity locked forever", "100% of the supply goes into one Uniswap v4 position at launch. Its NFT is held by an ownerless locker with no withdraw path: not the creator, not openlaunch, nobody."],
+  ["Liquidity locked forever", "100% of the supply goes into one Uniswap v4 position at launch. Its NFT is held by an ownerless locker with no withdraw path: not the creator, not oklaunch, nobody."],
   ["No pre-mine, no admin", "Every token starts inside the pool. The contracts have no owner, no pause, no upgrade and no allowlist. They are the same for everyone."],
   ["Open source", "Contracts and site are MIT-licensed on GitHub, and every deployed contract is source-verified on the chain's explorers."],
   ["Creator-set trading fee", "0%, 1% or 3%, chosen at launch, paid in full to the beneficiaries the creator names or burned. Fixed forever."],
