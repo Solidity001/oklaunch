@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
+import path from "path";
 import { SECURITY_HEADERS } from "./src/lib/security-headers";
+
 
 const nextConfig: NextConfig = {
   // Fly: the Dockerfile copies .next/standalone (server.js + traced node_modules).
@@ -8,6 +10,16 @@ const nextConfig: NextConfig = {
   // .next/standalone/node_modules and scripts/migrate.mjs can import it inside
   // the image (release_command runs there, outside the Next server).
   serverExternalPackages: ["postgres"],
+  // Vercel/webpack: stub out the optional `accounts` dependency that wagmi
+  // references but does not install. Without this, webpack fails with
+  // "Module not found: Can't resolve 'accounts'".
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      accounts: path.resolve("./src/lib/empty-module.js"),
+    };
+    return config;
+  },
   async headers() {
     return [
       {
