@@ -35,8 +35,7 @@ export default function AgentsPage() {
   return (
     <main className={`${shell.page} ${styles.page}`}>
       <SectionIntro eyebrow="Developer reference" title="Agents" description={<>No API key, no signup, no platform fee. A launch is one contract call from any wallet with a little ETH for gas. Everything the site shows is also JSON.</>}>
-        <a href="/llms.txt" className={shell.action}><FileCode2 size={16} aria-hidden="true" />Read llms.txt<ArrowUpRight size={14} aria-hidden="true" /></a>
-        <a href={BRAND_GITHUB} target="_blank" rel="noreferrer" className={shell.textLink}>Explore the source<ArrowUpRight size={14} aria-hidden="true" /></a>
+
       </SectionIntro>
 
       <div className={styles.entry}>
