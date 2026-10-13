@@ -20,6 +20,14 @@ const nextConfig: NextConfig = {
     };
     return config;
   },
+  // Local dev (Turbopack is the default in Next.js 16): same alias, different
+  // config key. Without this, Next.js errors because a `webpack` block exists
+  // but no matching `turbopack` block does.
+  turbopack: {
+    resolveAlias: {
+      accounts: "./src/lib/empty-module.js",
+    },
+  },
   async headers() {
     return [
       {
