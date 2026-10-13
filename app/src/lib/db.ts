@@ -27,7 +27,7 @@ function createSql(url: string) {
     max: 5,
     idle_timeout: 20,
     connect_timeout: 10,
-    prepare: true,
+    prepare: false,
     transform: { undefined: null },
     types: {
       bigint: postgres.BigInt,
@@ -43,7 +43,7 @@ function createSql(url: string) {
         },
       },
     },
-    onnotice: () => {},
+    onnotice: () => { },
   });
 }
 
