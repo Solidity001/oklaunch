@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 import { SECURITY_HEADERS } from "./src/lib/security-headers";
 
 const nextConfig: NextConfig = {
@@ -8,6 +9,23 @@ const nextConfig: NextConfig = {
   // .next/standalone/node_modules and scripts/migrate.mjs can import it inside
   // the image (release_command runs there, outside the Next server).
   serverExternalPackages: ["postgres"],
+  // Vercel/webpack: stub out optional wagmi connector dependencies that are
+  // not installed. Without this, webpack fails with "Module not found".
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      accounts: path.resolve("./src/lib/empty-module.js"),
+    };
+    return config;
+  },
+  // Local dev (Turbopack is the default in Next.js 16): same alias, different
+  // config key. Without this, Next.js errors because a `webpack` block exists
+  // but no matching `turbopack` block does.
+  turbopack: {
+    resolveAlias: {
+      accounts: "./src/lib/empty-module.js",
+    },
+  },
   async headers() {
     return [
       {
